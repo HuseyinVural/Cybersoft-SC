@@ -1,0 +1,137 @@
+{
+    "city": {
+        "id": 745042,
+        "name": "İstanbul",
+        "coord": {
+            "lon": 28.9833,
+            "lat": 41.0351
+        },
+        "country": "TR",
+        "population": 0
+    },
+    "cod": "200",
+    "message": 0.0654947,
+    "cnt": 7,
+    "list": [
+        {
+            "dt": 1507453200,
+            "temp": {
+                "day": 13.44,
+                "min": 13.44,
+                "max": 14.17,
+                "night": 14.17,
+                "eve": 13.44,
+                "morn": 13.44
+            },
+            "pressure": 1022.77,
+            "humidity": 100,
+            "weather": [
+                {
+                    "id": 802,
+                    "main": "Clouds",
+                    "description": "scattered clouds",
+                    "icon": "03d"
+                }
+            ],
+            "speed": 7.06,
+            "deg": 273,
+            "clouds": 36
+        },
+        {
+            "dt": 1507539600,
+            "temp": {
+                "day": 16.05,
+                "min": 15,
+                "max": 16.67,
+                "night": 16.64,
+                "eve": 16.67,
+                "morn": 15
+            },
+            "pressure": 1028.18,
+            "humidity": 100,
+            "weather": [
+                {
+                    "id": 802,
+                    "main": "Clouds",
+                    "description": "scattered clouds",
+                    "icon": "03d"
+                }
+            ],
+            "speed": 3.46,
+            "deg": 289,
+            "clouds": 44
+        },
+        {
+            "dt": 1507626000,
+            "temp": {
+                "day": 17.21,
+                "min": 16.65,
+                "max": 18.34,
+                "night": 18.27,
+                "eve": 18.2,
+                "morn": 16.65
+            },
+            "pressure": 1031.61,
+            "humidity": 100,
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "sky is clear",
+                    "icon": "01d"
+                }
+            ],
+            "speed": 0.26,
+            "deg": 139,
+            "clouds": 0
+        },
+        {
+            "dt": 1507712400,
+            "temp": {
+                "day": 17.77,
+                "min": 17.64,
+                "max": 19.21,
+                "night": 18.81,
+                "eve": 19.21,
+                "morn": 17.78
+            },
+            "pressure": 1030.7,
+            "humidity": 100,
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "sky is clear",
+                    "icon": "01d"
+                }
+            ],
+            "speed": 2.64,
+            "deg": 92,
+            "clouds": 0
+        },
+        {
+            "dt": 1507798800,
+            "temp": {
+                "day": 21.04,
+                "min": 13.83,
+                "max": 21.04,
+                "night": 13.83,
+                "eve": 16.23,
+                "morn": 15.89
+            },
+            "pressure": 1021.39,
+            "humidity": 0,
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "sky is clear",
+                    "icon": "01d"
+                }
+            ],
+            "speed": 2.4,
+            "deg": 7,
+            "clouds": 0
+        }
+    ]
+}
