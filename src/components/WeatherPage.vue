@@ -5,7 +5,7 @@
             <div id="weather-capsu">
                 <WeatherUnit v-on:changeUnit="changeUnitAndGetData"></WeatherUnit>
                 <div id="today-capsul">
-                    <WeatherToday v-bind:tempData="tempData"></WeatherToday>
+                    <WeatherToday  v-bind:serachTextPar="searchText" v-bind:unitsPar="units"></WeatherToday>
                 </div>
                 <div id="weather-row-capsul">
                     <WeatherRow v-for="data in tempData.list" :key="data.dt"  v-bind:tempData="data"></WeatherRow> 

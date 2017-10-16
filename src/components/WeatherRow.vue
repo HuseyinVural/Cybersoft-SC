@@ -13,7 +13,6 @@ export default {
     props:['tempData'],
     data () {
         return {
-            tempData:[],
             days:[""],
         }
     },

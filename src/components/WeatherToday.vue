@@ -1,11 +1,11 @@
 <template>
     <div class="weather-today-widget">
-        <span id="temp-city">{{tempData.city.name}}</span>
-        <span id="temp-icon" v-bind:class="getWeatherIcone(tempData.list[0].weather[0].id)"></span>
-        <span id="temp-deg">{{parseInt(tempData.list[0].temp.day)}}°C</span>
-        <span id="temp-state">{{tempData.list[0].weather[0].main}}</span>
-        <span id="temp-wind">Wind: {{tempData.list[0].speed}} mph</span>
-        <span id="temp-humidity">Humidity: {{tempData.list[0].humidity}}%</span>
+        <span id="temp-city">{{tempData.name}}</span>
+        <span id="temp-icon" v-bind:class="getWeatherIcone(tempData.weather[0].id)"></span>
+        <span id="temp-deg">{{parseInt(tempData.main['temp'])}}°C</span>
+        <span id="temp-state">{{tempData.weather[0].main}}</span>
+        <span id="temp-wind">Wind: {{tempData.wind.speed}} mph</span>
+        <span id="temp-humidity">Humidity: {{tempData.main.humidity}}%</span>
     </div>
 </template>
 
@@ -14,13 +14,38 @@
 
 export default {
     name: 'WeatherToday',
-    props:['tempData'],
+    props:["serachTextPar","unitsPar"],
     data () {
         return {
-            tempData:[]
+            tempData:[],
+            serachText:this.serachTextPar,
+            units:this.unitsPar
+        }
+    },
+    created(){
+        this.getTodayData();
+    },
+    watch: {
+        serachTextPar: function () {
+            this.serachText = this.serachTextPar
+            this.getTodayData();
+        },
+        unitsPar: function () {
+            this.units = this.unitsPar
+            this.getTodayData();
         }
     },
     methods: {
+        getTodayData: function(){
+            const url = "http://api.openweathermap.org/data/2.5/weather?q="+this.serachText+"&apiKey=58b6f7c78582bffab3936dac99c31b25&units="+this.unitsPar;
+            fetch(url).then((response) => {
+                console.log(url);
+                return response.json().then((json) => {
+                    this.tempData = json;
+                });
+            });
+
+        },
         getWeatherIcone: function (weatherID) {
             console.log(weatherID);
             switch(true) { 
